@@ -12,9 +12,15 @@ WORKDIR /www/webapp
 
 RUN apt-get update && \
     apt-get install -y wget && \
-    apt-get -y install unoconv
+    apt-get -y install unoconv &&\
+    apt-get -y install fontconfig xfonts-utils
+
+
 
 
 EXPOSE 8080
 #暴露端口
 EXPOSE 9876
+
+#fc-list :lang=zh
+#https://installati.one/kalilinux/
